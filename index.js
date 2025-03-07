@@ -8,7 +8,13 @@ require("dotenv").config();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://gazkifa-frontend.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 sequelize.sync({ force: false }).then(() => console.log("Database Connected"));
 
