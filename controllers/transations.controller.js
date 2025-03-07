@@ -1,7 +1,7 @@
 const Products = require("../models/products.model");
 const sequelize = require("../config/database");
 const { QueryTypes, Op, Sequelize } = require("sequelize");
-const Transactions = require("../models/Transactions.model");
+const Transactions = require("../models/transactions.model");
 
 const transactionRecord = async (req, res) => {
   const transaction = await sequelize.transaction(); // Start a database transaction

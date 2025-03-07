@@ -1,7 +1,7 @@
 const sharp = require("sharp");
 const Products = require("../models/products.model");
 const { Op } = require("sequelize");
-const Transactions = require("../models/Transactions.model");
+const Transactions = require("../models/transactions.model");
 
 const newProduct = async (req, res) => {
   try {
